@@ -1,0 +1,58 @@
+## Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+build/
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+
+# Caches
+.cache/
+.parcel-cache/
+.cache-loader/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Vercel / deployment
+.vercel/
+.now/
+
+# Build artifacts
+*.tgz
+
+# Misc
+.env.*.local
+.eslintcache
+.next/cache
+.serverless/
+node_modules/.cache/
+
+# SSH keys and certs
+*.pem
+
+# Optional: uncomment if using JetBrains
+# .idea/
+
