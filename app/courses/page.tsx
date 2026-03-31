@@ -13,26 +13,26 @@ const categories = [
 ];
 
 const courses = [
-  { title: "Figma UI/UX Design", category: "UI/UX Designing", price: "₹249", rating: 4.5, students: 120, duration: "3 Weeks", lessons: 7, tags: ["Figma", "Adobe XD"], icon: "🎨", color: "from-purple-500 to-pink-500" },
-  { title: "Python Programming", category: "Python Programming", price: "₹399", rating: 4.8, students: 280, duration: "6 Weeks", lessons: 12, tags: ["Python", "ML"], icon: "🐍", color: "from-blue-500 to-cyan-500" },
-  { title: "Cyber Security", category: "Web Development", price: "₹500", rating: 4.6, students: 95, duration: "4 Weeks", lessons: 9, tags: ["Security", "Network"], icon: "🔒", color: "from-red-500 to-orange-500" },
-  { title: "MongoDB", category: "Web Development", price: "₹599", rating: 4.4, students: 150, duration: "3 Weeks", lessons: 8, tags: ["MongoDB", "NoSQL"], icon: "🍃", color: "from-green-500 to-teal-500" },
-  { title: "Full Stack Dev", category: "Web Development", price: "₹2,850", rating: 4.9, students: 420, duration: "12 Weeks", lessons: 24, tags: ["React", "Node", "DB"], icon: "⚡", color: "from-yellow-500 to-orange-500" },
-  { title: "Java Programming", category: "Java", price: "₹699", rating: 4.7, students: 310, duration: "8 Weeks", lessons: 18, tags: ["Java", "OOP"], icon: "☕", color: "from-orange-500 to-red-500" },
-  { title: "Front End", category: "Web Development", price: "₹499", rating: 4.5, students: 200, duration: "5 Weeks", lessons: 15, tags: ["HTML", "CSS", "JS"], icon: "🌐", color: "from-blue-400 to-indigo-500" },
-  { title: "React.js", category: "Web Development", price: "₹799", rating: 4.8, students: 350, duration: "6 Weeks", lessons: 16, tags: ["React", "Hooks"], icon: "⚛️", color: "from-cyan-500 to-blue-500" },
-  { title: "Angular", category: "Web Development", price: "₹648", rating: 4.3, students: 115, duration: "5 Weeks", lessons: 14, tags: ["Angular", "TS"], icon: "🅰️", color: "from-red-600 to-red-400" },
-  { title: "Node.js", category: "Web Development", price: "₹648", rating: 4.6, students: 180, duration: "4 Weeks", lessons: 12, tags: ["Node", "Express"], icon: "🔋", color: "from-green-600 to-green-400" },
-  { title: "HTML & CSS", category: "Web Development", price: "₹499", rating: 4.5, students: 450, duration: "3 Weeks", lessons: 10, tags: ["HTML", "CSS"], icon: "📄", color: "from-orange-400 to-yellow-400" },
-  { title: "Adobe XD", category: "Designing", price: "₹299", rating: 4.4, students: 90, duration: "2 Weeks", lessons: 8, tags: ["XD", "UI"], icon: "🎭", color: "from-pink-500 to-rose-500" },
-  { title: "Machine Learning", category: "AI & ML", price: "₹1,299", rating: 4.9, students: 380, duration: "10 Weeks", lessons: 22, tags: ["ML", "Python"], icon: "🤖", color: "from-violet-500 to-purple-500" },
-  { title: "Artificial Intelligence", category: "AI & ML", price: "₹1,499", rating: 4.8, students: 290, duration: "12 Weeks", lessons: 26, tags: ["AI", "TF"], icon: "🧠", color: "from-indigo-500 to-blue-500" },
-  { title: "C", category: "C++", price: "₹199", rating: 4.3, students: 210, duration: "4 Weeks", lessons: 12, tags: ["C", "Programming"], icon: "📝", color: "from-gray-600 to-gray-400" },
-  { title: "C++", category: "C++", price: "₹299", rating: 4.5, students: 175, duration: "5 Weeks", lessons: 14, tags: ["C++", "OOP"], icon: "🔧", color: "from-blue-700 to-blue-500" },
-  { title: ".Net", category: "Web Development", price: "₹749", rating: 4.4, students: 130, duration: "6 Weeks", lessons: 16, tags: [".NET", "C#"], icon: "💎", color: "from-indigo-600 to-violet-500" },
-  { title: "SQL", category: "Web Development", price: "₹399", rating: 4.6, students: 240, duration: "4 Weeks", lessons: 10, tags: ["SQL", "DB"], icon: "🗄️", color: "from-blue-500 to-cyan-400" },
-  { title: "Data Science", category: "AI & ML", price: "₹1,099", rating: 4.8, students: 320, duration: "10 Weeks", lessons: 20, tags: ["Python", "Stats"], icon: "📊", color: "from-teal-500 to-green-500" },
-  { title: "JavaScript", category: "JavaScript Development", price: "₹599", rating: 4.7, students: 410, duration: "5 Weeks", lessons: 15, tags: ["JS", "ES6"], icon: "🟨", color: "from-yellow-400 to-orange-400" },
+  { title: "Figma UI/UX Design", category: "UI/UX Designing", price: "₹249", rating: 4.5, reviews: 6512, duration: "3 Weeks", hours: "08 hr 12 mins", lessons: 7, desc: "Use Figma to get a job in UI Design, User Interface, User Experience design.", icon: "🎨", color: "from-[#1a1145] to-[#2d1b69]" },
+  { title: "Python Programming", category: "Python Programming", price: "₹399", rating: 4.8, reviews: 8340, duration: "6 Weeks", hours: "18 hr 30 mins", lessons: 12, desc: "Master Python from basics to advanced concepts including data structures and algorithms.", icon: "🐍", color: "from-[#0c2d48] to-[#145374]" },
+  { title: "Cyber Security", category: "Web Development", price: "₹500", rating: 4.6, reviews: 3210, duration: "4 Weeks", hours: "12 hr 45 mins", lessons: 9, desc: "Learn ethical hacking, network security, and vulnerability assessment techniques.", icon: "🔒", color: "from-[#3d0c02] to-[#6b2014]" },
+  { title: "MongoDB", category: "Web Development", price: "₹599", rating: 4.4, reviews: 4150, duration: "3 Weeks", hours: "09 hr 20 mins", lessons: 8, desc: "Build scalable NoSQL databases with MongoDB for modern web applications.", icon: "🍃", color: "from-[#0b3d2e] to-[#116149]" },
+  { title: "Full Stack Dev", category: "Web Development", price: "₹2,850", rating: 4.9, reviews: 12480, duration: "12 Weeks", hours: "42 hr 15 mins", lessons: 24, desc: "Complete full stack development with React, Node.js, and database technologies.", icon: "⚡", color: "from-[#3d2b00] to-[#6b4f0a]" },
+  { title: "Java Programming", category: "Java", price: "₹699", rating: 4.7, reviews: 7820, duration: "8 Weeks", hours: "24 hr 40 mins", lessons: 18, desc: "Comprehensive Java programming from OOP fundamentals to enterprise applications.", icon: "☕", color: "from-[#3d1c00] to-[#6b3410]" },
+  { title: "Front End", category: "Web Development", price: "₹499", rating: 4.5, reviews: 5640, duration: "5 Weeks", hours: "15 hr 10 mins", lessons: 15, desc: "Build responsive, interactive websites with HTML, CSS, and JavaScript.", icon: "🌐", color: "from-[#0c1d48] to-[#1a3574]" },
+  { title: "React.js", category: "Web Development", price: "₹799", rating: 4.8, reviews: 9120, duration: "6 Weeks", hours: "20 hr 30 mins", lessons: 16, desc: "Modern React development with hooks, context, and state management.", icon: "⚛️", color: "from-[#003040] to-[#00546e]" },
+  { title: "Angular", category: "Web Development", price: "₹648", rating: 4.3, reviews: 2870, duration: "5 Weeks", hours: "16 hr 50 mins", lessons: 14, desc: "Build enterprise-grade applications with Angular framework and TypeScript.", icon: "🅰️", color: "from-[#3d0a0a] to-[#6b1818]" },
+  { title: "Node.js", category: "Web Development", price: "₹648", rating: 4.6, reviews: 5310, duration: "4 Weeks", hours: "13 hr 25 mins", lessons: 12, desc: "Server-side JavaScript with Node.js, Express, and REST API development.", icon: "🔋", color: "from-[#1a3d1a] to-[#2d6b2d]" },
+  { title: "HTML & CSS", category: "Web Development", price: "₹499", rating: 4.5, reviews: 11250, duration: "3 Weeks", hours: "10 hr 15 mins", lessons: 10, desc: "Foundation of web development — build beautiful, responsive web pages.", icon: "📄", color: "from-[#3d2800] to-[#6b4800]" },
+  { title: "Adobe XD", category: "Designing", price: "₹299", rating: 4.4, reviews: 2340, duration: "2 Weeks", hours: "06 hr 40 mins", lessons: 8, desc: "Design stunning UI prototypes and wireframes with Adobe XD.", icon: "🎭", color: "from-[#3d0c2e] to-[#6b1450]" },
+  { title: "Machine Learning", category: "AI & ML", price: "₹1,299", rating: 4.9, reviews: 8760, duration: "10 Weeks", hours: "35 hr 20 mins", lessons: 22, desc: "Build intelligent systems with supervised, unsupervised, and deep learning.", icon: "🤖", color: "from-[#240c48] to-[#3d1474]" },
+  { title: "Artificial Intelligence", category: "AI & ML", price: "₹1,499", rating: 4.8, reviews: 6930, duration: "12 Weeks", hours: "40 hr 10 mins", lessons: 26, desc: "Explore neural networks, NLP, and computer vision in this AI course.", icon: "🧠", color: "from-[#0c1848] to-[#1a2d74]" },
+  { title: "C", category: "C++", price: "₹199", rating: 4.3, reviews: 4580, duration: "4 Weeks", hours: "12 hr 30 mins", lessons: 12, desc: "Learn the fundamentals of C programming — pointers, memory, and more.", icon: "📝", color: "from-[#1a1a2e] to-[#2d2d48]" },
+  { title: "C++", category: "C++", price: "₹299", rating: 4.5, reviews: 3920, duration: "5 Weeks", hours: "14 hr 50 mins", lessons: 14, desc: "Object-oriented programming with C++ including STL and modern features.", icon: "🔧", color: "from-[#0c1840] to-[#142a6b]" },
+  { title: ".Net", category: "Web Development", price: "₹749", rating: 4.4, reviews: 3150, duration: "6 Weeks", hours: "19 hr 15 mins", lessons: 16, desc: "Develop web and desktop applications with .NET framework and C#.", icon: "💎", color: "from-[#1a0c48] to-[#2d1474]" },
+  { title: "SQL", category: "Web Development", price: "₹399", rating: 4.6, reviews: 6840, duration: "4 Weeks", hours: "11 hr 35 mins", lessons: 10, desc: "Master database querying, design, and optimization with SQL.", icon: "🗄️", color: "from-[#0c2840] to-[#14486b]" },
+  { title: "Data Science", category: "AI & ML", price: "₹1,099", rating: 4.8, reviews: 7450, duration: "10 Weeks", hours: "32 hr 45 mins", lessons: 20, desc: "Data analysis, visualization, and statistical modeling with Python.", icon: "📊", color: "from-[#0c3d30] to-[#146b54]" },
+  { title: "JavaScript", category: "JavaScript Development", price: "₹599", rating: 4.7, reviews: 9870, duration: "5 Weeks", hours: "16 hr 20 mins", lessons: 15, desc: "Complete JavaScript from ES6+ features to async programming and DOM.", icon: "🟨", color: "from-[#3d3000] to-[#6b5400]" },
 ];
 
 const whyChoose = [
@@ -199,48 +199,105 @@ export default function CoursesPage() {
           )}
 
           {/* Course Grid */}
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <AnimatePresence mode="popLayout">
               {(search ? filtered : courses.filter(c => c.category === activeCategory || activeCategory === "All")).map((course, i) => (
                 <motion.div
                   key={course.title}
                   layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ delay: i * 0.05, duration: 0.3 }}
-                  whileHover={{ y: -6 }}
-                  className="course-card bg-white"
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ delay: i * 0.06, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                  whileHover={{ y: -10, transition: { duration: 0.3 } }}
+                  className="bg-white border border-gray-100/80 shadow-[0_1px_8px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_40px_rgba(255,107,43,0.08)] transition-shadow duration-500 overflow-hidden group max-w-[320px] mx-auto w-full"
+                  style={{ borderRadius: '5px 62px 5px 62px' }}
                 >
-                  <div className={`h-32 bg-gradient-to-br ${course.color} flex items-center justify-center text-5xl relative overflow-hidden`}>
-                    <div className="absolute inset-0 bg-black/10" />
-                    <span className="relative z-10">{course.icon}</span>
-                    <div className="absolute top-2 right-2 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-2 py-1 rounded-full">
-                      {course.duration}
+                  {/* Image area with inner padding */}
+                  <div className="p-3 pb-0">
+                    <div className={`relative h-44 bg-gradient-to-br ${course.color} flex items-center justify-center overflow-visible`} style={{ borderRadius: '3px 58px 16px 16px' }}>
+                      {/* Subtle pattern overlay */}
+                      <div className="absolute inset-0 overflow-hidden" style={{ borderRadius: '3px 58px 16px 16px' }}>
+                        <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: 'radial-gradient(circle at 25% 45%, rgba(255,255,255,0.2) 1px, transparent 1px), radial-gradient(circle at 75% 25%, rgba(255,255,255,0.15) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+                      </div>
+
+                      {/* Animated icon */}
+                      <motion.span
+                        className="relative z-10 text-6xl drop-shadow-lg"
+                        animate={{ y: [0, -6, 0] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }}
+                      >
+                        {course.icon}
+                      </motion.span>
+
+                      {/* Duration badge - top left inside image */}
+                      <div className="absolute top-3 left-3 bg-primary text-white text-[11px] font-semibold px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                        <Clock className="w-3 h-3" />
+                        {course.hours}
+                      </div>
+
+                      {/* Weeks badge - top right, overlapping outward */}
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: i * 0.06 + 0.3, duration: 0.35 }}
+                        className="absolute -top-2 -right-2 bg-white rounded-xl shadow-sm px-3.5 py-2 text-center z-20"
+                      >
+                        <div className="text-2xl font-black text-primary leading-none">{course.duration.split(' ')[0]}</div>
+                        <div className="text-[9px] text-gray-400 font-medium mt-0.5">Weeks</div>
+                      </motion.div>
+
+                      {/* Lessons badge - bottom left, overlapping outward */}
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: i * 0.06 + 0.4, duration: 0.35 }}
+                        className="absolute -bottom-2 -left-2 bg-white rounded-xl shadow-sm px-3.5 py-2 text-center z-20"
+                      >
+                        <div className="text-2xl font-black text-primary leading-none">{course.lessons}</div>
+                        <div className="text-[9px] text-gray-400 font-medium mt-0.5">Lessons</div>
+                      </motion.div>
                     </div>
                   </div>
-                  <div className="p-4">
-                    <div className="text-xs text-primary font-semibold mb-1">{course.category}</div>
-                    <h3 className="font-bold text-navy text-sm mb-2 line-clamp-2" style={{ fontFamily: "Sora, sans-serif" }}>
-                      {course.title}
+
+                  {/* Card Body */}
+                  <div className="px-5 pt-5 pb-5">
+                    <h3 className="font-bold text-navy text-xl mb-2 line-clamp-1" style={{ fontFamily: "Sora, sans-serif" }}>
+                      {course.title}..
                     </h3>
-                    <div className="flex flex-wrap gap-1 mb-3">
-                      {course.tags.map(t => (
-                        <span key={t} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">{t}</span>
-                      ))}
+                    <p className="text-gray-500 text-[13px] leading-relaxed mb-5 line-clamp-2">
+                      {course.desc}
+                    </p>
+
+                    {/* Rating row */}
+                    <div className="flex items-center gap-2.5 mb-6">
+                      <span className="text-primary font-bold text-xl">{course.rating}</span>
+                      <div className="flex items-center gap-0.5">
+                        {Array.from({ length: 5 }).map((_, idx) => (
+                          <Star
+                            key={idx}
+                            className={`w-[18px] h-[18px] ${
+                              idx < Math.floor(course.rating)
+                                ? 'fill-amber-400 text-amber-400'
+                                : idx < course.rating
+                                ? 'fill-amber-400/50 text-amber-400'
+                                : 'fill-gray-200 text-gray-200'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                      <span className="text-xs text-gray-400">({course.reviews.toLocaleString()})</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs text-gray-500 mb-3">
-                      <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                      <span className="font-semibold text-gray-700">{course.rating}</span>
-                      <span>•</span>
-                      <Users className="w-3.5 h-3.5" />
-                      <span>{course.students}</span>
-                    </div>
+
+                    {/* Bottom: Enroll + Price */}
                     <div className="flex items-center justify-between">
-                      <span className="text-primary font-bold">{course.price}</span>
-                      <Link href="/courses/enroll" className="text-xs btn-primary py-1.5 px-3">
-                        Enroll
+                      <Link
+                        href="/courses/enroll"
+                        className="text-[13px] font-semibold border-2 border-primary text-primary rounded-full px-5 py-2 hover:bg-primary hover:text-white transition-all duration-300 hover:shadow-[0_4px_16px_rgba(255,107,43,0.3)]"
+                      >
+                        Enroll now
                       </Link>
+                      <span className="text-xl font-black text-primary">{course.price}</span>
                     </div>
                   </div>
                 </motion.div>
