@@ -32,8 +32,8 @@ const footerLinks = {
 };
 
 const socials = [
-  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Instagram, href: "https://www.instagram.com/innovyasa", label: "Instagram" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/innovyasa/", label: "LinkedIn" },
   { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
   { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
@@ -87,11 +87,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm text-gray-400">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                <span>innovyasa@gmail.com</span>
+                <a href="mailto:innovyas@gmail.com" className="hover:text-primary transition-colors">
+                  innovyas@gmail.com
+                </a>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-400">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <span>+91 9876543210</span>
+                <a href="tel:+919492030578" className="hover:text-primary transition-colors">
+                  +91 9492030578
+                </a>
               </div>
             </div>
             {/* Social */}

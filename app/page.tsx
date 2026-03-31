@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   ArrowRight, Star, CheckCircle, Play, ChevronLeft, ChevronRight,
   BookOpen, Users, Briefcase, Award, Globe, Code, Cpu, Zap,
@@ -130,16 +130,13 @@ export default function HomePage() {
       window.scrollTo({ top: 0, behavior: "auto" });
     }
   }, []);
-  const { scrollYProgress } = useScroll({ target: heroRef });
-  const heroY = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
     <div className="overflow-x-hidden">
       {/* ===== HERO SECTION ===== */}
       <section
         ref={heroRef}
-        className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-navy via-[#1A2E5A] to-navy overflow-hidden"
+        className="relative min-h-[80vh] flex items-center bg-gradient-to-br from-navy via-[#1A2E5A] to-navy overflow-hidden"
       >
         {/* Background decorations */}
         <div className="absolute inset-0 section-grid opacity-20" />
@@ -164,7 +161,7 @@ export default function HomePage() {
           className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"
         />
 
-        <motion.div style={{ y: heroY, opacity: heroOpacity }} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <motion.div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-28">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left */}
             <div>
@@ -325,7 +322,7 @@ export default function HomePage() {
         </motion.div>
 
         {/* Wave bottom */}
-        <div className="absolute bottom-0 left-0 right-0">
+        <div className="absolute  bottom-[-1px] left-0 right-0">
           <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 60L1440 60L1440 30C1200 0 960 60 720 30C480 0 240 60 0 30L0 60Z" fill="white" />
           </svg>
@@ -430,6 +427,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== PARTNER COMPANIES MARQUEE ===== */}
+      {false && (
       <section className="py-20 px-4 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <FadeIn className="text-center mb-12">
@@ -483,6 +481,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      )}
 
       {/* ===== TESTIMONIALS ===== */}
       <section className="py-20 px-4 bg-navy relative overflow-hidden">
