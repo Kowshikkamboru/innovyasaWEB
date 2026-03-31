@@ -12,7 +12,7 @@
   --bg-light: #F8F9FA;
 }
 
-* {
+html {
   scroll-behavior: smooth;
 }
 
