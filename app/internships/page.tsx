@@ -3,16 +3,17 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight, Clock, Users, Briefcase, Award, Star, ChevronRight, TrendingUp } from "lucide-react";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/AnimationUtils";
+import HeroCarousel from "@/components/HeroCarousel";
 
 const internships = [
-  { title: "Software Developer", type: "Full-time", level: "Entry", duration: "3-6 months", mode: "Remote", tags: ["React", "Node.js"], color: "border-l-blue-500" },
-  { title: "Software Associate Developer", type: "Full-time", level: "Entry", duration: "3-6 months", mode: "Remote", tags: ["JS", "CSS"], color: "border-l-primary" },
-  { title: "Java Developer", type: "Remote", level: "Senior", duration: "3-6 months", mode: "Remote", tags: ["Java", "Spring"], color: "border-l-green-500" },
-  { title: "Data Science Analyst", type: "Part-time", level: "Entry", duration: "3-6 months", mode: "Remote", tags: ["Python", "ML"], color: "border-l-purple-500" },
-  { title: "Python Full Stack Developer", type: "Remote", level: "Entry", duration: "3 months", mode: "Remote", tags: ["Python", "Django"], color: "border-l-yellow-500" },
-  { title: "Flutter Developer", type: "Full-time", level: "Entry", duration: "3-6 months", mode: "Remote", tags: ["Flutter", "Dart"], color: "border-l-cyan-500" },
-  { title: "Data Visualist", type: "Contract", level: "Entry", duration: "2-3 months", mode: "Remote", tags: ["PowerBI", "Tableau"], color: "border-l-pink-500" },
-  { title: "C# Developer", type: "Full-time", level: "Entry", duration: "3-6 months", mode: "Remote", tags: ["C#", ".NET"], color: "border-l-indigo-500" },
+  { title: "Software Developer", image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1400&q=80&auto=format&fit=crop", type: "Full-time", level: "Entry", duration: "3-6 months", mode: "Remote", tags: ["React", "Node.js"], color: "border-l-blue-500" },
+  { title: "Software Associate Developer", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1400&q=80&auto=format&fit=crop", type: "Full-time", level: "Entry", duration: "3-6 months", mode: "Remote", tags: ["JS", "CSS"], color: "border-l-primary" },
+  { title: "Java Developer", image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1400&q=80&auto=format&fit=crop", type: "Remote", level: "Senior", duration: "3-6 months", mode: "Remote", tags: ["Java", "Spring"], color: "border-l-green-500" },
+  { title: "Data Science Analyst", image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1400&q=80&auto=format&fit=crop", type: "Part-time", level: "Entry", duration: "3-6 months", mode: "Remote", tags: ["Python", "ML"], color: "border-l-purple-500" },
+  { title: "Python Full Stack Developer", image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1400&q=80&auto=format&fit=crop", type: "Remote", level: "Entry", duration: "3 months", mode: "Remote", tags: ["Python", "Django"], color: "border-l-yellow-500" },
+  { title: "Flutter Developer", image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e06?w=1400&q=80&auto=format&fit=crop", type: "Full-time", level: "Entry", duration: "3-6 months", mode: "Remote", tags: ["Flutter", "Dart"], color: "border-l-cyan-500" },
+  { title: "Data Visualist", image: "https://images.unsplash.com/photo-1519452575417-564c1401ecc0?w=1400&q=80&auto=format&fit=crop", type: "Contract", level: "Entry", duration: "2-3 months", mode: "Remote", tags: ["PowerBI", "Tableau"], color: "border-l-pink-500" },
+  { title: "C# Developer", image: "https://images.unsplash.com/photo-1505672678657-cc7037095e2c?w=1400&q=80&auto=format&fit=crop", type: "Full-time", level: "Entry", duration: "3-6 months", mode: "Remote", tags: ["C#", ".NET"], color: "border-l-indigo-500" },
 ];
 
 const steps = [
@@ -80,14 +81,8 @@ export default function InternshipsPage() {
               </motion.div>
             </div>
 
-            <div className="hidden lg:grid grid-cols-1 gap-4">
-              {["Turning aspirations into reality through innovation & creativity",
-                "Interchanging journeys for an unforgettable experience",
-                "Unlocking innovation, cultivating the leaders of this century"].map((text, i) => (
-                <motion.div key={i} initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 + i * 0.15 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/10 hover:bg-white/15 transition-colors">
-                  <p className="text-gray-200 text-sm">{text}</p>
-                </motion.div>
-              ))}
+            <div className="hidden lg:block">
+              <HeroCarousel images={internships.slice(0, 4).map(i => i.image)} />
             </div>
           </div>
         </div>
@@ -119,15 +114,20 @@ export default function InternshipsPage() {
             </FadeIn>
 
             <FadeIn delay={0.2} direction="left">
-              <div className="bg-gradient-to-br from-primary/5 to-navy/5 rounded-3xl p-8 border border-gray-100">
-                <h3 className="font-bold text-navy text-xl mb-6" style={{ fontFamily: "Sora, sans-serif" }}>
-                  Why Choose Innovyasa for Your{" "}
-                  <span className="text-primary">Internship?</span>
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  We're always looking for passionate, dynamic, and talented individuals to join our distributed team all round the world.
-                </p>
-                <div className="grid grid-cols-2 gap-4">
+              <div className="bg-gradient-to-br from-primary/5 to-navy/5 rounded-3xl p-6 border border-gray-100 overflow-hidden">
+                <div className="w-full">
+                  <video
+                    src="/assets/videos/Internship_Video_Creation_Request.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    className="w-full h-50 sm:h-50 md:h-64 object-cover rounded-lg"
+                  />
+                </div>
+
+                <div className="mt-6 grid grid-cols-2 gap-4">
                   <div className="bg-white rounded-xl p-4 text-center shadow-sm">
                     <div className="text-3xl font-black text-primary">2000+</div>
                     <div className="text-xs text-gray-500">Happy Students</div>
