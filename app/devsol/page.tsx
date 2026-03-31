@@ -282,8 +282,9 @@ export default function DevsolPage() {
 
       {/* ═══ PORTFOLIO — Table / List View ═══════════════════════════════ */}
       <section id="portfolio" className="py-28 px-4 bg-[#f8f9fb] relative overflow-hidden">
-        <div className="absolute inset-0 section-dots opacity-[0.13]" />
-        <div className="max-w-6xl mx-auto relative">
+        <div className="absolute inset-0 section-dots z-0" />
+        <div className="absolute inset-0 section-primary-grid opacity-10 pointer-events-none z-0" />
+        <div className="max-w-6xl mx-auto relative z-10">
           <FadeIn className="text-center mb-14">
             <span className="hero-tag inline-flex mb-4">Our Work</span>
             <h2 className="section-title mb-4">Client <span className="text-primary">Portfolio</span></h2>
@@ -382,7 +383,7 @@ export default function DevsolPage() {
           return (
             <motion.div key="portfolio-modal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex justify-start" onClick={() => setSelectedProjectIdx(null)}>
               <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
-              <motion.div initial={{ x: "-100%" }} animate={{ x: 0 }} exit={{ x: "-100%" }} transition={{ type: "spring", stiffness: 300, damping: 30 }} onClick={e => e.stopPropagation()} className="relative bg-white w-full max-w-lg h-full overflow-y-auto shadow-2xl">
+              <motion.div initial={{ x: "-100%" }} animate={{ x: 0 }} exit={{ x: "-100%" }} transition={{ type: "spring", stiffness: 300, damping: 30 }} onClick={e => e.stopPropagation()} className="relative bg-white w-full max-w-lg h-full shadow-2xl flex flex-col">
                 {/* Header bar */}
                 <div className="sticky top-0 z-10 bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -409,7 +410,7 @@ export default function DevsolPage() {
                 </div>
 
                 {/* Body */}
-                <div className="px-6 py-6">
+                <div className="px-6 py-6 overflow-y-auto flex-1">
                   <p className="text-gray-500 text-sm leading-relaxed mb-5">{p.desc}</p>
 
                   <div className="flex flex-wrap gap-1.5 mb-5">
@@ -444,21 +445,24 @@ export default function DevsolPage() {
                   </div>
                 </div>
 
-                {/* Navigation */}
-                <div className="flex items-center justify-between px-6 py-4 border-t border-gray-100 bg-gray-50/50 sticky bottom-0">
-                  <button onClick={() => setSelectedProjectIdx(prev => prev !== null && prev > 0 ? prev - 1 : prev)} disabled={selectedProjectIdx === 0} className="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-primary disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
-                    <ChevronLeft className="w-4 h-4" /> Previous
+                {/* Footer — horizontal pager fixed to the bottom of the sidebar panel */}
+                <div className="px-6 py-4 border-t border-gray-100 bg-white flex items-center justify-between">
+                  <button aria-label="Previous project" onClick={() => setSelectedProjectIdx(prev => prev !== null && prev > 0 ? prev - 1 : prev)} disabled={selectedProjectIdx === 0} className="w-11 h-11 rounded-md flex items-center justify-center text-gray-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+                    <ChevronLeft className="w-4 h-4" />
                   </button>
-                  <span className="text-xs text-gray-400">{selectedProjectIdx + 1} / {filteredProjects.length}</span>
-                  <button onClick={() => setSelectedProjectIdx(prev => prev !== null && prev < filteredProjects.length - 1 ? prev + 1 : prev)} disabled={selectedProjectIdx === filteredProjects.length - 1} className="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-primary disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
-                    Next <ChevronRight className="w-4 h-4" />
+                  <div className="text-sm text-gray-500 font-medium">{selectedProjectIdx + 1} / {filteredProjects.length}</div>
+                  <button aria-label="Next project" onClick={() => setSelectedProjectIdx(prev => prev !== null && prev < filteredProjects.length - 1 ? prev + 1 : prev)} disabled={selectedProjectIdx === filteredProjects.length - 1} className="w-11 h-11 rounded-md flex items-center justify-center text-gray-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+                    <ChevronRight className="w-4 h-4" />
                   </button>
                 </div>
+
               </motion.div>
             </motion.div>
           );
         })()}
       </AnimatePresence>
+
+      
 
       {/* ═══ PRODUCTS — Dark Showcase ════════════════════════════════════ */}
       <section id="products" className="py-28 px-4 bg-gradient-to-br from-navy via-[#0F2149] to-[#152952] relative overflow-hidden">
@@ -528,7 +532,7 @@ export default function DevsolPage() {
           return (
             <motion.div key="product-modal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8" onClick={() => setSelectedProductIdx(null)}>
               <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
-              <motion.div initial={{ opacity: 0, scale: 0.92, y: 30 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.92, y: 30 }} transition={{ type: "spring", stiffness: 300, damping: 30 }} onClick={e => e.stopPropagation()} className="relative bg-navy rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto">
+              <motion.div initial={{ opacity: 0, scale: 0.92, y: 30 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.92, y: 30 }} transition={{ type: "spring", stiffness: 300, damping: 30 }} onClick={e => e.stopPropagation()} className="relative bg-navy rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] flex flex-col overflow-hidden">
                 {/* Gradient Header */}
                 <div className={`bg-gradient-to-r ${p.color} p-7 rounded-t-2xl relative`}>
                   <button onClick={() => setSelectedProductIdx(null)} className="absolute top-4 right-4 w-8 h-8 bg-white/20 backdrop-blur rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/30 transition-colors">
@@ -549,7 +553,7 @@ export default function DevsolPage() {
                 </div>
 
                 {/* Content */}
-                <div className="p-7">
+                <div className="p-7 overflow-y-auto flex-1">
                   <p className="text-gray-300 text-sm leading-relaxed mb-6">{p.desc}</p>
 
                   <div className="grid grid-cols-2 gap-2 mb-6">
@@ -583,21 +587,24 @@ export default function DevsolPage() {
                   </div>
                 </div>
 
-                {/* Navigation Arrows */}
-                <div className="flex items-center justify-between px-7 py-4 border-t border-white/10 bg-white/[0.02] rounded-b-2xl">
-                  <button onClick={() => setSelectedProductIdx(prev => prev !== null && prev > 0 ? prev - 1 : prev)} disabled={selectedProductIdx === 0} className="flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-primary disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
-                    <ChevronLeft className="w-4 h-4" /> Previous
+                {/* Footer — horizontal pager on product modal bottom */}
+                <div className="px-6 py-4 border-t border-white/10 bg-navy/95 flex items-center justify-between rounded-b-2xl">
+                  <button aria-label="Previous product" onClick={() => setSelectedProductIdx(prev => prev !== null && prev > 0 ? prev - 1 : prev)} disabled={selectedProductIdx === 0} className="w-11 h-11 rounded-md flex items-center justify-center text-white/80 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+                    <ChevronLeft className="w-4 h-4" />
                   </button>
-                  <span className="text-xs text-gray-300">{selectedProductIdx + 1} / {products.length}</span>
-                  <button onClick={() => setSelectedProductIdx(prev => prev !== null && prev < products.length - 1 ? prev + 1 : prev)} disabled={selectedProductIdx === products.length - 1} className="flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-primary disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
-                    Next <ChevronRight className="w-4 h-4" />
+                  <div className="text-sm text-white/80 font-medium">{selectedProductIdx + 1} / {products.length}</div>
+                  <button aria-label="Next product" onClick={() => setSelectedProductIdx(prev => prev !== null && prev < products.length - 1 ? prev + 1 : prev)} disabled={selectedProductIdx === products.length - 1} className="w-11 h-11 rounded-md flex items-center justify-center text-white/80 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+                    <ChevronRight className="w-4 h-4" />
                   </button>
                 </div>
+
               </motion.div>
             </motion.div>
           );
         })()}
       </AnimatePresence>
+
+      
 
       {/* ═══ COST ESTIMATOR ════════════════════════════════════════════════ */}
       <section id="estimator" className="py-28 px-4 bg-gradient-to-br from-gray-50 to-orange-50/30 relative overflow-hidden">
