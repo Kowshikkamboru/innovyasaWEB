@@ -1,18 +1,21 @@
 {
-  "name": "innovyasa",
-  "version": "0.1.0",
+  "name": "@innovyasa/web",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack --port 3000",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --port 3000",
     "lint": "next lint"
   },
   "dependencies": {
+    "@innovyasa/ui": "*",
+    "@swc/helpers": "^0.5.15",
     "clsx": "^2.1.1",
     "framer-motion": "^11.1.7",
     "lucide-react": "^0.383.0",
     "next": "^16.2.0",
+    "picocolors": "^1.1.1",
     "react": "^18",
     "react-dom": "^18",
     "react-intersection-observer": "^9.10.3",
