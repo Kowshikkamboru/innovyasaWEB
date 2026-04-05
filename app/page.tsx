@@ -161,7 +161,7 @@ export default function HomePage() {
           className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"
         />
 
-        <motion.div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-28">
+        <motion.div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20 lg:pt-24 pb-28">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left */}
             <div>

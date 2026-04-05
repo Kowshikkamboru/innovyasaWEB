@@ -167,27 +167,31 @@ export default function Footer() {
         </div>
 
         {/* Newsletter */}
-        <div className="border border-white/10 rounded-2xl p-6 mb-10 bg-white/3">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div>
-              <h4 className="font-bold text-white text-base mb-1">
-                📬 Subscribe to Our Newsletter
+        <div className="pt-8 mb-10 border-t border-white/10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="md:flex-1">
+              <h4 className="font-bold text-white text-lg mb-1">
+                Subscribe to Our Newsletter
               </h4>
-              <p className="text-gray-400 text-sm">Get internship opportunities, course updates, and career tips.</p>
+              <p className="text-gray-400 text-sm">Get internship news and online course updates.</p>
             </div>
-            <form className="flex gap-2 w-full sm:w-auto" onSubmit={e => e.preventDefault()}>
+
+            <form className="flex items-center gap-3 w-full md:w-auto" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="bg-white/10 border border-white/15 text-white placeholder:text-gray-500 px-4 py-3 rounded-xl text-sm focus:outline-none focus:border-primary flex-1 sm:w-64 transition-colors"
+                aria-label="Email address"
+                className="bg-white/5 border border-white/10 text-white placeholder:text-gray-400 px-6 py-3 rounded-2xl text-sm focus:outline-none flex-1 md:w-[520px] transition-colors"
               />
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="bg-primary hover:bg-orange-light px-5 py-3 rounded-xl transition-colors flex-shrink-0"
+                className="bg-primary hover:bg-orange-light w-12 h-12 rounded-xl transition-colors flex items-center justify-center flex-shrink-0"
+                aria-label="Subscribe"
               >
-                <Send className="w-4 h-4 text-white" />
+                <Send className="w-5 h-5 text-white" />
               </motion.button>
             </form>
           </div>
