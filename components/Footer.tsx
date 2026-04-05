@@ -48,7 +48,7 @@ export default function Footer() {
       <div className="absolute inset-0 section-grid opacity-5 pointer-events-none" />
 
       {/* ─── CTA BANNER ─────────────────────────────────────────────── */}
-      <div className="relative bg-gradient-to-r from-primary via-orange-400 to-primary bg-size-200 animate-gradient-x py-14 px-4">
+      <div className="relative bg-gradient-to-r from-primary via-orange-400 to-primary bg-size-200 animate-gradient-x py-8 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div>
@@ -82,8 +82,8 @@ export default function Footer() {
       </div>
 
       {/* ─── MAIN FOOTER ────────────────────────────────────────────── */}
-      <div className="max-w-7xl mx-auto px-4 pt-16 pb-10 relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 mb-14">
+      <div className="max-w-7xl mx-auto px-4 pt-10 pb-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
           {/* Brand column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-5 group">
@@ -109,7 +109,6 @@ export default function Footer() {
               {[
                 { icon: Mail, text: "innovyas@gmail.com", href: "mailto:innovyas@gmail.com" },
                 { icon: Phone, text: "+91 9492030578", href: "tel:+919492030578" },
-                { icon: MapPin, text: "Hyderabad, Telangana, India", href: "#" },
               ].map(({ icon: Icon, text, href }) => (
                 <a key={text} href={href} className="flex items-center gap-3 text-sm text-gray-400 hover:text-primary transition-colors group">
                   <div className="w-7 h-7 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 transition-colors">
@@ -167,7 +166,7 @@ export default function Footer() {
         </div>
 
         {/* Newsletter */}
-        <div className="pt-8 mb-10 border-t border-white/10">
+        <div className="pt-6 mb-6 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="md:flex-1">
               <h4 className="font-bold text-white text-lg mb-1">
@@ -198,7 +197,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-4 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-xs">
             © {new Date().getFullYear()} All Rights Reserved | Innovyasa Technologies Pvt Ltd
           </p>
